@@ -1,0 +1,37 @@
+@import '../../styles/abstracts/mixins';
+@import '../../styles/base/variables';
+
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 1.6rem 3.2rem;
+  height: 72px;
+  width: 100%;
+  z-index: 10;
+  transition: box-shadow .2s linear;
+  background-color: $background-color-light;
+}
+
+.navbarLeft {
+  flex: 1;
+}
+
+.navbarMenu {
+  display: none;
+}
+
+.scrolled {
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: $box-shadow;
+}
+
+@include respond(tab-port) {
+  .navbarRight {
+    display: none;
+  }
+  .navbarMenu {
+    display: block;
+  }
+}

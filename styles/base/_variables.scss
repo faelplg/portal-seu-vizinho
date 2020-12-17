@@ -1,0 +1,46 @@
+////
+/// Project main variables
+/// @group Base
+/// @author Rafael Goulart (faelplg)
+////
+
+/// @type color
+$background-color: #F5F5F6;
+/// @type color
+$background-color-secondary: #E1E2E1;
+/// @type color
+$background-color-light: #FFFFFF;
+/// @type color
+$background-color-dark: #444444;
+/// @type color
+$background-backdrop: rgba(34, 34, 34, 0.6);
+
+/// @type color
+$color-primary: #41A96D;
+/// @type color
+$color-primary-light: #75DB9C;
+/// @type color
+$color-primary-dark: #007941;
+
+/// @type color
+$color-secondary: #DC842D;
+/// @type color
+$color-secondary-light: #FFB45C;
+/// @type color
+$color-secondary-dark: #A55700;
+
+/// @type color
+$font-color: #222222;
+/// @type color
+$font-color-display: #0B1B12;
+/// @type color
+$font-color-secondary: #888888;
+/// @type color
+$font-color-light: #ffffff;
+
+/// Default box-shadow
+/// @group FX
+$box-shadow: 0 2px 4px -1px rgba(0,0,0,.2), 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12);
+/// Default inset box-shadow
+/// @group FX
+$box-shadow-inset: inset 2px 2px 16px 8px rgba(22, 22, 22, 0.6);

@@ -1,7 +1,9 @@
-import '../styles/globals.css'
+/* eslint-disable react/jsx-filename-extension */
+/* eslint-disable react/prop-types */
+import '../styles/base.scss';
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+function SeuVizinho({ Component, pageProps }) {
+  return <Component {...pageProps} />;
 }
 
-export default MyApp
+export default SeuVizinho;

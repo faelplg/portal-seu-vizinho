@@ -1,0 +1,43 @@
+@import '../../styles/base/variables';
+
+.btn {
+  height: 4rem;
+  padding: 0 1.6rem;
+  margin: 0 0.4rem;
+  background-color: transparent;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn:focus, .btn:active {
+  outline: none;
+}
+
+.btn:hover {
+  background-color: lighten($color-secondary-light, 25%);
+}
+
+.btn:active {
+  background-color: lighten($color-secondary-light, 20%);
+}
+
+.btnLink,
+.btnOutline {
+  color: $color-secondary;
+}
+
+.btnOutline {
+  border: 1px solid $color-secondary;
+}
+
+.btnIcon {
+  padding: 0;
+  height: 5.6rem;
+  width: 5.6rem;
+  border-radius: 50%;
+}
+
+.btnIconColor {
+  color: $color-secondary;
+}

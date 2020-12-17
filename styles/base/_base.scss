@@ -1,0 +1,72 @@
+////
+/// Base styles
+/// @group Base
+/// @author Rafael Goulart (faelplg)
+////
+
+/// Reset default browser styles.
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  position: relative;
+  z-index: 0;
+}
+
+/// Font-size global settings.
+/// 1em = 16px.
+/// 1rem = 10px.
+html {
+  // I want 10px as the default font-size.
+  // If 16px is the root default.
+  // 10px divided by 16px = 0.625
+  // Now 1rem ~= 10px;
+  font-size: 62.5%; 
+
+  // phone displays
+  // @media (max-width: 37.5em) {
+  //   // width < 600?
+  //   // 1rem = 8px, 8/16 = 50
+  //   font-size: 50%;
+  // }
+
+  // tablet displays - portrait
+  @media (max-width: 75em) {
+    // width < 1200?
+    // 1rem = 9px, 9/16 = 56.25
+    font-size: 56.25%;
+  }
+
+  // tablet displays - portrait
+  @media (max-width: 56.25em) {
+    // width < 900?
+    // 1rem = 8px, 8/16 = 50
+    font-size: 50%; 
+  }
+
+  // big displays
+  @media (min-width: 112.5em) {
+    // width > 1800?
+    // 1 rem = 12px, 12/16 = 75
+    font-size: 75%;
+  }
+}
+
+/// Main elements settings.
+html,
+body,
+#__next {
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: column;
+}
+
+/// Container style.
+.container {
+  padding: 2.4rem;
+  @media (max-width: 37.5em) {
+    padding: 0.8rem;
+  }
+}
