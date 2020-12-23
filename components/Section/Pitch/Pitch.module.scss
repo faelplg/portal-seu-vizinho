@@ -1,0 +1,17 @@
+@import '../../../styles/base/variables';
+
+.Pitch {
+  padding: 1.6rem;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.Pitch h1 {
+  color: $font-color-display;
+}
+
+.Pitch p {
+  text-align: center;
+  margin: 0.8rem 0 1.6rem;
+}

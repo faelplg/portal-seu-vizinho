@@ -1,0 +1,17 @@
+.Axis {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 1.6rem;
+}
+
+.Act {
+  flex: 1;
+  text-align: center;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  min-width: 16rem;
+  padding: 0.8rem 1.6rem;
+}

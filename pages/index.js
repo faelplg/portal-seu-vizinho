@@ -4,6 +4,8 @@ import Head from 'next/head';
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
 import Section from '../components/Section';
+import Pitch from '../components/Section/Pitch';
+import Axes from '../components/Section/Axis';
 import links from '../constants/navigation.constants';
 import styles from '../styles/Landing.module.scss';
 
@@ -26,13 +28,16 @@ export default function Home() {
       {!isLoading && (
         <main className={styles.main}>
           <Hero />
-          <Section title="Pitch" />
-          <Section title="Eixos de Atuação" />
-          <Section title="Indicadores" />
-          <Section title="Vídeos" />
-          <Section title="Depoimentos" />
-          <Section title="Parceiros" />
-          <Section title="Redes sociais e Contatos" />
+          <Section palette="default">
+            <Pitch />
+          </Section>
+          <Section title="Eixos de Atuação" attach>
+            <Axes />
+          </Section>
+          <Section palette="light" title="Indicadores"></Section>
+          <Section palette="light" title="Vídeos" />
+          <Section palette="light" title="Depoimentos" />
+          <Section palette="light" title="Parceiros" />
         </main>
       )}
 
