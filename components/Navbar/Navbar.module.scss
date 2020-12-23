@@ -12,6 +12,10 @@
   background-color: $background-color-light;
 }
 
+.navbarRight {
+  display: flex;
+}
+
 .navbarLeft {
   flex: 1;
 }

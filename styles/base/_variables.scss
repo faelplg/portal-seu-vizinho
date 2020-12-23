@@ -11,7 +11,7 @@ $background-color-secondary: #E1E2E1;
 /// @type color
 $background-color-light: #FFFFFF;
 /// @type color
-$background-color-dark: #444444;
+$background-color-dark: #333;
 /// @type color
 $background-backdrop: rgba(34, 34, 34, 0.6);
 
@@ -34,13 +34,14 @@ $font-color: #222222;
 /// @type color
 $font-color-display: #0B1B12;
 /// @type color
-$font-color-secondary: #888888;
+$font-color-secondary: #414141;
 /// @type color
 $font-color-light: #ffffff;
 
 /// Default box-shadow
 /// @group FX
 $box-shadow: 0 2px 4px -1px rgba(0,0,0,.2), 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12);
+$box-shadow-sm: 0 1px 2px -1px rgba(0,0,0,.2), 0 2px 3px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
 /// Default inset box-shadow
 /// @group FX
 $box-shadow-inset: inset 2px 2px 16px 8px rgba(22, 22, 22, 0.6);

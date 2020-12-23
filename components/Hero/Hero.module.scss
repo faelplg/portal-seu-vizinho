@@ -8,45 +8,128 @@
   min-height: calc(100vh - 72px);
 }
 
+@include respond(tab-land) {
+  .hero {
+    margin: 0 4%;
+  }
+}
+
+@include respond(tab-port) {
+  .hero {
+    margin: 0;
+  }
+}
+
 .heroMain {
-  flex: 1;
+  flex: 1 1 0;
   display: flex;
+  flex-flow: column;
   justify-content: center;
   align-items: center;
   min-height: calc(100vh - 72px);
 }
 
+.heroMain__logo {
+  width: 400px;
+  height: 231px;
+  margin-bottom: 4.8rem;
+}
+
+@include respond(big-desktop) {
+  .heroMain__logo {
+    width: 444px;
+    height: 256px;
+  }
+}
+
+@include respond(tab-land) {
+  .heroMain__logo {
+    width: 360px;
+    height: 208px;
+  }
+}
+
+@include respond(tab-port) {
+  .heroMain__logo {
+    margin-top: -7.2rem;
+    width: 444px;
+    height: 256px;
+  }
+}
+
+@include respond(phone) {
+  .heroMain__logo {
+    margin-top: -7.2rem;
+    width: 300px;
+    height: 173px;
+  }
+}
+
+@include respond(phone-land) {
+  .heroMain__logo {
+    width: 240px;
+    height: 138px;
+  }
+}
+
 .heroArt {
-  flex: 2;
+  flex: 2 1 0;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: calc(100vh - 72px);
-  background-image: url(/art-hero-01_758x482.png);
+  background-image: url(/art-hero_758x482.png);
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
 }
 
-.pictureArt {
-  border-radius: 50%;
-  border: 10px solid;
-  border-image-slice: 1;
-  border-width: 5px;
-  border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+.heroArt__photo {
+  height: 360px;
+  width: 360px;
+}
+
+@include respond(big-desktop) {
+  .heroArt__photo {
+    height: 500px;
+    width: 500px;
+  }
+}
+
+@include respond(tab-land) {
+  .heroArt__photo {
+    height: 256px;
+    width: 256px;
+  }
 }
 
 @include respond(tab-port) {
   .hero {
     flex-flow: column;
+    background-image: url(/art-pattern-mobile_768x127.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
   }
   .heroMain {
-    height: 100%;
-    min-height: 100%;
+    flex: 1 0 auto;
   }
-  
   .heroArt {
-    min-height: calc(100vh - 72px);
-    background-image: url(/art-hero-02_400x240.png);
+    display: none;
+  }
+}
+
+@include respond(tab-mini-land) {
+  .heroMain {
+    padding-top: 4.8rem;
+  }
+}
+
+@include respond(phone-land) {
+  .hero {
+    background-image: unset;
+  }
+  .heroMain__logo {
+    width: 240px;
+    height: 138px;
   }
 }

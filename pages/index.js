@@ -1,37 +1,19 @@
 /* eslint-disable react/jsx-filename-extension */
+import { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
+import Section from '../components/Section';
+import links from '../constants/navigation.constants';
 import styles from '../styles/Landing.module.scss';
 
 export default function Home() {
-  const navLinks = [
-    {
-      key: 1,
-      btnType: 'link',
-      btnText: 'Quem somos',
-    },
-    {
-      key: 2,
-      btnType: 'link',
-      btnText: 'Eixos de atuação',
-    },
-    {
-      key: 3,
-      btnType: 'link',
-      btnText: 'Nossa história',
-    },
-    {
-      key: 4,
-      btnType: 'link',
-      btnText: 'Contato',
-    },
-    {
-      key: 5,
-      btnType: 'outline',
-      btnText: 'Quero apoiar',
-    },
-  ];
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    setIsLoading(false);
+  }, []);
+
   return (
     <>
       <Head>
@@ -39,22 +21,26 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Navbar navLinks={navLinks} />
+      {!isLoading && <Navbar navLinks={links} />}
 
-      <main className={styles.main}>
-        <Hero />
-      </main>
+      {!isLoading && (
+        <main className={styles.main}>
+          <Hero />
+          <Section title="Pitch" />
+          <Section title="Eixos de Atuação" />
+          <Section title="Indicadores" />
+          <Section title="Vídeos" />
+          <Section title="Depoimentos" />
+          <Section title="Parceiros" />
+          <Section title="Redes sociais e Contatos" />
+        </main>
+      )}
 
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by
-          Fael.Tech
-        </a>
-      </footer>
+      {!isLoading && (
+        <footer className={styles.footer}>
+          <h2 className="text--title">Mais informações sobre o Seu Vizinho</h2>
+        </footer>
+      )}
     </>
   );
 }

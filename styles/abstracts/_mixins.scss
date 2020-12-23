@@ -41,6 +41,16 @@
 ///     font-size: 50%;
 ///   }
 @mixin respond($breakpoint) {
+  @if $breakpoint == phone-land {
+    @media (max-height: 25.75em) {
+      @content;
+    } // < 412px
+  }
+  @if $breakpoint == tab-mini-land {
+    @media (max-height: 33.75em) {
+      @content;
+    } // < 540px
+  }
   @if $breakpoint == phone {
     @media (max-width: 37.5em) {
       @content;
