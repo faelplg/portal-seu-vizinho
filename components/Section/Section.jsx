@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styles from './Section.module.scss';
 
 const Section = ({
-  title, palette, attach, children,
+  sectionId, title, palette, attach, children,
 }) => {
   const attachClass = attach ? 'sectionAttached' : '';
   let paletteClass = '';
@@ -25,7 +25,7 @@ const Section = ({
       break;
   }
   return (
-    <section className={[styles.section, styles[paletteClass], styles[attachClass]].join(' ')}>
+    <section id={sectionId} className={[styles.section, styles[paletteClass], styles[attachClass]].join(' ')}>
       <div className={styles.sectionHeadline}>
         <h1 className="text--headline">
           { title }
@@ -37,6 +37,7 @@ const Section = ({
 };
 
 Section.propTypes = {
+  sectionId: PropTypes.string,
   title: PropTypes.string,
   palette: PropTypes.string,
   attach: PropTypes.bool,
@@ -44,6 +45,7 @@ Section.propTypes = {
 };
 
 Section.defaultProps = {
+  sectionId: '',
   title: '',
   palette: '',
   attach: false,

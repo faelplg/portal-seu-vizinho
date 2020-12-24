@@ -34,7 +34,7 @@ export default function Home() {
       {!isLoading && (
         <main className={styles.main}>
           <Hero />
-          <Section>
+          <Section sectionId="pitch">
             <Pitch />
             <Results />
           </Section>

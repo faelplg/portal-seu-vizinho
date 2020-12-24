@@ -37,3 +37,24 @@
 .navBtnOutline {
   border: 1px solid $color-secondary;
 }
+
+.navBtn.navBtnRaised,
+.navBtnRaised {
+  background-color: $color-secondary;
+  color: $font-color;
+  box-shadow: $box-shadow;
+
+  &:hover {
+    background-color: darken($color-secondary, 5%);
+  }
+  
+  &:active {
+    background-color: darken($color-secondary, 10%);
+    box-shadow: $box-shadow-sm;
+  }
+}
+
+.navBtnLg {
+  height: 4.2rem;
+  padding: 0.4rem 3.2rem;
+}

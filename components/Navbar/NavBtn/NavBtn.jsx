@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styles from './NavBtn.module.scss';
 
 const NavBtn = React.forwardRef(({
-  onClick, href, target, rel, outline, children,
+  onClick, href, target, rel, outline, raised, children,
 }, ref) => (
   <a
     href={href}
@@ -15,6 +15,8 @@ const NavBtn = React.forwardRef(({
       styles.navBtn,
       styles.navBtnLink,
       outline ? styles.navBtnOutline : '',
+      raised ? styles.navBtnRaised : '',
+      raised ? styles.navBtnLg : '',
     ].join(' ')}
   >
     {children}
@@ -28,6 +30,7 @@ NavBtn.propTypes = {
   target: PropTypes.string,
   rel: PropTypes.string,
   outline: PropTypes.bool,
+  raised: PropTypes.bool,
   children: PropTypes.node.isRequired,
 };
 NavBtn.defaultProps = {
@@ -36,6 +39,7 @@ NavBtn.defaultProps = {
   target: '_self',
   rel: '',
   outline: false,
+  raised: false,
 };
 
 export default NavBtn;

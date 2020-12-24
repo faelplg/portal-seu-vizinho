@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import Button from '../Button';
+import NavBtn from '../Navbar/NavBtn';
 import styles from './Hero.module.scss';
 
 const Hero = () => (
@@ -8,7 +8,7 @@ const Hero = () => (
       <div className={styles.heroMain__logo}>
         <Image src="/logo-text_green-orange_444x256.png" layout="fill" />
       </div>
-      <Button btnType="raised" btnSize="lg">Saiba mais</Button>
+      <NavBtn href="#pitch" raised>Saiba mais</NavBtn>
     </div>
     <div className={styles.heroArt}>
       <div className={styles.heroArt__img}>
