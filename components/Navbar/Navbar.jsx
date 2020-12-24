@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { IconContext } from 'react-icons';
 import { FiMenu } from 'react-icons/fi';
 import Button from '../Button';
+import Link from 'next/link';
 import styles from './Navbar.module.scss';
 
 const Navbar = ({ navLinks }) => {
@@ -18,10 +19,16 @@ const Navbar = ({ navLinks }) => {
     }
   };
 
+  // const navButtons = navLinks.map((link) => (
+  //   <Button key={link.key} btnType={link.btnType}>
+  //     { link.btnText }
+  //   </Button>
+  // ));
+
   const navButtons = navLinks.map((link) => (
-    <Button key={link.key} btnType={link.btnType}>
-      { link.btnText }
-    </Button>
+    <Link key={link.key} href="/about">
+      <a href className={[styles.navBtn, styles.navBtnLink, link.btnOutline ? styles.navBtnOutline : ''].join(' ')}>{ link.btnText }</a>
+    </Link>
   ));
 
   useEffect(() => {
@@ -32,6 +39,7 @@ const Navbar = ({ navLinks }) => {
     <header className={[styles.navbar, scrolled ? styles.scrolled : null].join(' ')}>
       <div className={styles.navbarLeft}>
         <Image src="/navbar-logo_100x100.png" alt="Logomarca do Seu Vizinho" width={40} height={40} />
+        <p className="text--code">Escola de Artes, Livre e Periférica</p>
       </div>
       <nav className={styles.navbarRight}>
         {navButtons}

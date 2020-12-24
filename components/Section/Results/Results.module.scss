@@ -1,12 +1,14 @@
-.Axis {
+@import '../../../styles/base/variables';
+
+.Results {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  padding: 3.2rem 1.6rem 1.6rem;
+  padding: 1.6rem;
 }
 
-.Act {
+.Result {
   flex: 1;
   text-align: center;
   display: flex;
@@ -14,4 +16,8 @@
   align-items: center;
   min-width: 16rem;
   padding: 0.8rem 1.6rem;
+}
+
+.Result h2 {
+  color: $font-color-display;
 }

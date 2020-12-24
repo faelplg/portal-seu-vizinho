@@ -37,15 +37,15 @@
 
 @include respond(big-desktop) {
   .heroMain__logo {
-    width: 444px;
-    height: 256px;
+    width: 560px;
+    height: 323px;
   }
 }
 
 @include respond(tab-land) {
   .heroMain__logo {
-    width: 360px;
-    height: 208px;
+    width: 340px;
+    height: 193px;
   }
 }
 
@@ -78,28 +78,27 @@
   justify-content: center;
   align-items: center;
   min-height: calc(100vh - 72px);
-  background-image: url(/art-hero_758x482.png);
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
 }
 
-.heroArt__photo {
-  height: 360px;
-  width: 360px;
+.heroArt__img {
+  width: 758px;
+  height: 482px;
 }
 
 @include respond(big-desktop) {
-  .heroArt__photo {
-    height: 500px;
-    width: 500px;
+  .heroArt__img {
+    width: 900px;
+    height: 572px;
   }
 }
 
 @include respond(tab-land) {
-  .heroArt__photo {
-    height: 256px;
-    width: 256px;
+  .heroArt__img {
+    width: 580px;
+    height: 368px;
   }
 }
 

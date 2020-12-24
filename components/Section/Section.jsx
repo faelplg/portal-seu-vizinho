@@ -2,9 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Section.module.scss';
 
-const Section = ({ title, palette, attach, children }) => {
+const Section = ({
+  title, palette, attach, children,
+}) => {
+  const attachClass = attach ? 'sectionAttached' : '';
   let paletteClass = '';
-  let attachClass = attach ? 'sectionAttached' : '';
   switch (palette) {
     case 'secondary':
       paletteClass = 'sectionPalette__secondary';
@@ -35,13 +37,14 @@ Section.propTypes = {
   title: PropTypes.string,
   palette: PropTypes.string,
   attach: PropTypes.bool,
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
 };
 
 Section.defaultProps = {
   title: '',
   palette: '',
   attach: false,
+  children: null,
 };
 
 export default Section;

@@ -1,0 +1,52 @@
+@import '../../../styles/base/variables';
+@import '../../../styles/abstracts/mixins';
+
+.videos {
+  display: flex;
+  flex-flow: column;
+}
+
+.videoRow,
+.videoRow__reverse {
+  display: flex;
+  align-items: center;
+  padding: 3.2rem;
+
+  & p {
+    padding: 3.2rem;
+    text-align: justify;
+  }
+}
+
+.videoPlayer,
+.reactPlayer * {
+  width: 48rem;
+  height: 26rem;
+}
+
+@include respond(tab-land) {
+  .videoPlayer,
+  .reactPlayer * {
+    width: 36rem;
+    height: 20rem;
+  }
+}
+
+@include respond(tab-port) {
+  .videoRow,
+  .videoRow__reverse {
+    flex-flow: column;
+  }
+  .videoPlayer {
+    order: -1;
+  }
+}
+
+@include respond(phone) {
+  .videoRow,
+  .videoRow__reverse {
+    & p {
+      padding: 3.2rem 0;
+  }
+}
+}

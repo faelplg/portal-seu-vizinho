@@ -1,4 +1,4 @@
-const links = [
+export const links = [
   {
     key: 1,
     btnType: 'link',
@@ -10,6 +10,15 @@ const links = [
     btnText: 'Eixos de atuação',
   },
   {
+    key: 5,
+    btnType: 'outline',
+    btnText: 'Quero apoiar',
+    btnOutline: true,
+  },
+];
+
+export const unusedLinks = [
+  {
     key: 3,
     btnType: 'link',
     btnText: 'Nossa história',
@@ -18,11 +27,6 @@ const links = [
     key: 4,
     btnType: 'link',
     btnText: 'Contato',
-  },
-  {
-    key: 5,
-    btnType: 'outline',
-    btnText: 'Quero apoiar',
   },
 ];
 
