@@ -3,17 +3,13 @@ export const links = [
     key: 1,
     btnType: 'link',
     btnText: 'Quem somos',
+    link: '/quem-somos',
   },
   {
     key: 2,
     btnType: 'link',
     btnText: 'Eixos de atuação',
-  },
-  {
-    key: 5,
-    btnType: 'outline',
-    btnText: 'Quero apoiar',
-    btnOutline: true,
+    link: '/eixos-de-atuacao',
   },
 ];
 

@@ -1,0 +1,60 @@
+@import '../../../styles/base/variables';
+@import '../../../styles/abstracts/mixins';
+
+.testimonials {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4.8rem 3.2rem 0;
+}
+
+.testimonial {
+  display: flex;
+  align-items: center;
+  padding: 3.2rem;
+  background-color: $background-color;
+  transform: skew(-12deg);
+  min-height: 16rem;
+
+  @include respond(phone) {
+    flex-flow: column;
+    justify-content: center;
+    transform: skew(0);
+  }
+
+  &:not(:last-of-type) {
+    margin-bottom: 4.8rem;
+  }
+  
+  & .testimonialImg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: skew(12deg);
+    margin-right: 4.8rem;
+    min-width: 16rem;
+
+     @include respond(phone) {
+      transform: skew(0);
+      margin-right: 0;
+    }
+  }
+
+  & .testimonialText {
+    transform: skew(12deg);
+    text-align: justify;
+
+     @include respond(phone) {
+      transform: skew(0);
+      margin-top: 1.6rem;
+    }
+
+    & h3 {
+      margin-bottom: 1.6rem;
+      @include respond(phone) {
+        text-align: center;
+      }
+    }
+  }
+}

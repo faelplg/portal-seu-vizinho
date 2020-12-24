@@ -14,6 +14,9 @@ const Section = ({
     case 'light':
       paletteClass = 'sectionPalette__light';
       break;
+    case 'medium':
+      paletteClass = 'sectionPalette__medium';
+      break;
     case 'dark':
       paletteClass = 'sectionPalette__dark';
       break;
